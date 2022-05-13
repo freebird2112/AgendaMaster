@@ -1,0 +1,19 @@
+{
+    "services": [
+      {
+        "serviceName": "peluqueria",
+        "horario1": "5pm",
+        "horario2": "7pm"
+      },
+      {
+        "serviceName": "veterinario",
+        "horario1": "10am",
+        "horario2": "12pm"
+      },
+      {
+        "serviceName": "manicure",
+        "horario1": "3pm",
+        "horario2": "4pm"
+      }
+    ]
+}

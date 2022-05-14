@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Button = styled.button`
   background: ${props => props.primary ? "primary" : "white"};
   color: ${props => props.primary ? "primary" : "black"};
+  text-align: center;
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
@@ -11,6 +12,12 @@ export const Button = styled.button`
   transition: all .3s ease;
   &:hover {
     background: #dc3540;}
+`;
+
+export const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
 `;
 
 

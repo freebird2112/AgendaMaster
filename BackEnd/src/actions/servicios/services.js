@@ -24,7 +24,7 @@ exports.searchByName = (nombre) => {
         Name : nombre.serviceName
     } 
     console.log(object.Name) //esto nos tira false    
-
+x
     let response = []
     let company = this.getServices(false)    //revisado 
 

@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
     <Header course = {'AgendaMaster'}/>
-     <Button onClick={()=> console.log('nacho pete ')}>Peluquería</Button>
+     <Button onClick={()=>handler.updateService(data, "peluqueria") }>Peluquería</Button>
      <Button onClick={()=> console.log("prueba")}>Veterinario</Button>
      <Button onClick={()=> console.log("prueba")}>Manicure</Button>
     </div>

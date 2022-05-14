@@ -19,6 +19,19 @@ exports.getServices = (showPayment) =>{
     return company
 }
 
+exports.updateServices = (info, servicio) => {
+
+    const new_data = info;
+
+    info.forEach((element)=>{
+        if(element.serviceName == servicio.tipo){
+
+            console.log(element)
+        }
+    })
+
+}
+
 exports.searchByName = (nombre) => {
     const object = {
         Name : nombre.serviceName

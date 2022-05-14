@@ -5,6 +5,8 @@ const router = new Router()
 
 router.get('/service', companies.getAllServices)
 
+router.put('/service/:tipo', companies.updateDisponibilidad)
+
 router.post('/service', companies.postService)
 
 //router.post('/companies', companies.searchByNameOrLocation)

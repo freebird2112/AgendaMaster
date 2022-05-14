@@ -5,6 +5,10 @@ exports.getAllServices = (ctx) => {
     ctx.body = serviceAction.getServices(false)
     return ctx
 }
+exports.updateDisponibilidad = (ctx) => {
+    ctx.body = serviceAction.updateServices(ctx.request.body, ctx.request.params);
+    //return ctx
+}
 
 exports.postService = (ctx) => {
     let request = ctx.request.body

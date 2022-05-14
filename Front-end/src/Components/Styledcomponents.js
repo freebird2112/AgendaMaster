@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+
+
 export const Button = styled.button`
   background: ${props => props.primary ? "primary" : "white"};
   color: ${props => props.primary ? "primary" : "black"};
@@ -12,6 +14,9 @@ export const Button = styled.button`
   &:hover {
     background: #dc3540;}
 `;
+
+
+
 
 
 /*render(
@@ -42,4 +47,5 @@ render(
       TEL-335 : AgendaMaster
     </Title>
   </Wrapper>
-);*/
+);
+*/

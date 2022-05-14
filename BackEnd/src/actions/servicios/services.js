@@ -32,7 +32,7 @@ exports.updateServices = (info, servicio) => {
 
 }
 
-exports.searchByName = (nombre) => {
+/*exports.searchByName = (nombre) => {
     const object = {
         Name : nombre.serviceName
     } 
@@ -50,14 +50,11 @@ exports.searchByName = (nombre) => {
         }
     })
     return response
-}
+}*/
 
+exports.getService = (ctx) =>{
 
-
-/*exports.getService = (ctx) =>{
-
-    servicios.json.name.find({name:ctx}
-        },function(err, doc) {
+    servicios.json.name.find({name:ctx},function(err, doc) {
             const company = []
             servicesData.services.forEach((element)=> {
                 obj = {}
@@ -73,9 +70,27 @@ exports.searchByName = (nombre) => {
             })
             return company
         });
-}*/
+}
     
+exports.deleteHorario = (hour, ctx) => {
+    servicios.json.name.find({name:ctx},function(err, doc){
+            const company = []
+            servicesData.services.forEach((element)=> {
+                obj1 = {}
+                obj2 = {}
+                obj1.horario1 = element.horario1
+                obj2.horario2 = element.horario2
+                if(!bool && obj.horario1 !== hour){
+                    company.push(obj1)
+                }
+                if(!bool && obj.horario2 !== hour){
+                    company.push(obj2)
+                }
+            })
+            return company
+        });
 
+}
 
 exports.addUsers = (userData) => {
     const user = {
@@ -85,49 +100,3 @@ exports.addUsers = (userData) => {
     }
     users.push(user)
 }
-
-
-
-/*
-exports.searchByNameOrLocation = (search) => {
-    const object = {
-        searchCompany : search.search
-    }
-    let response = []
-    let company = this.getCompanies(false)
-
-    company.forEach((element) => {
-        if(element.companyName == object.searchCompany){
-            response.push(element)
-        }
-    })
-    return response
-}
-
-exports.searchByPayment = (payment, order) => {
-    let response = []
-    let company = this.getCompanies(true)
-
-    company.forEach((element) => {
-        if(element.paymentType == payment){
-            response.push(element)
-        }
-    })
-
-    if(order == "asc"){
-        response.sort((a,b) =>{
-            a = new Date(a.createdAt)
-            b = new Date(b.createdAt)
-            return a - b;
-        })
-    }else if(order == 'dsc'){
-        response.sort((a,b) => {
-            a = new Date(a.createdAt)
-            b = new Date(b.createdAt)
-            return b - a;
-        })
-    }
-
-    return response
-}
-*/

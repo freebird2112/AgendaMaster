@@ -10,7 +10,7 @@ exports.updateDisponibilidad = (ctx) => {
     //return ctx
 }
 
-exports.postService = (ctx) => {
+exports.getServicio = (ctx) => {
     let request = ctx.request.body
     let response = serviceAction.searchByName(request)
     if(Object.keys(response).length === 0){
@@ -21,54 +21,32 @@ exports.postService = (ctx) => {
     }
     else{
         ctx.body = {
-            Servicio: response        //cranear esta wea para que devuelva solo los horarios
+            Servicio: response    
         }
     }
     return ctx
 }
 
+exports.deleteHorario = (ctx) => {
+    let request = ctx.request.body
+    let response = serviceAction.deleteHorario(request)
+    ctx.body = { message: 'User was removed' }
+    return ctx
+}
 
-
-/*
-exports.searchByNameOrLocation = (ctx) => {
-    let search = ctx.request.body
-    let response = companyAction.searchByNameOrLocation(search)
+/*exports.postService = (ctx) => {
+    let request = ctx.request.body
+    let response = serviceAction.searchByName(request)
     if(Object.keys(response).length === 0){
-        ctx.body =  {
-            status: 200, 
-            message : 'No se encontró la compañía buscada'}
-
-    }else{
-        ctx.body = {status: 200,
-                    Companies: response}
-    }
-    return ctx
-}
-
-exports.searchByPaymentType = (ctx) => {
-    let paymentType = ctx.params.paymentType
-    let order = ctx.params.order
-
-    let response = companyAction.searchByPayment(paymentType, order)
-
-    if(order == "asc" || order == "dsc"){
-        ctx.response.status = 200
-        if(Object.keys(response).length === 0){
-            ctx.body =  {
-                status: ctx.response.status, 
-                message : 'No se encontró la compañía buscada'}
-    
-        }else{
-            ctx.body = {status: ctx.response.status,
-                        Companies: response}
-        }
-    }else{
-        ctx.response.status = 500
         ctx.body = {
-            status: ctx.response.status,
-            message: 'Hubo un error al procesar los datos, intente nuevamente'
+            status : 404,
+            message : 'No encontrado'
+        }
+    }
+    else{
+        ctx.body = {
+            Servicio: response    
         }
     }
     return ctx
-}
-*/
+}*/

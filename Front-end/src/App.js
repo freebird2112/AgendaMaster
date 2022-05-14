@@ -2,7 +2,7 @@ import Header from './headers';
 import { useState, useEffect } from 'react';
 import {handlerAgenda} from './Controllers/agenda';
 import './App.css';
-import { Button } from './Components/Styledcomponents';
+import { Button, Title } from './Components/Styledcomponents';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Accordion} from 'react-bootstrap';
 import {Navbar} from 'react-bootstrap'
@@ -13,11 +13,12 @@ import {Form} from 'react-bootstrap';
 import {ButtonGroup} from 'react-bootstrap';
 import {Collapse} from 'react-bootstrap';
 import {Card} from 'react-bootstrap';
-
+import image from "./images/img2.jpg";
 
 
 function Example() {
   const [open, setOpen] = useState(false);
+  
 
   return (
     <>
@@ -26,7 +27,7 @@ function Example() {
         aria-controls="example-collapse-text"
         aria-expanded={open}
       >
-        Horario 1
+        Horario 1 
       </Button>
       <div style={{minHeight: '150px'}}>
         <Collapse in={open} dimension="width">
@@ -87,8 +88,7 @@ function Example() {
           </div>
         </Collapse>
       </div>
-    </>
-    
+      </>
   );
 }
 
@@ -108,17 +108,21 @@ function App() {
 
 
   return (
+    <Container style={{ backgroundImage:`url(${image})`, backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    width: '100vw',
+    height: '100vh'}}>
     <Container fluid>
-      <Navbar bg-dark>
-        <Container fluid>
-          <Navbar.Brand href="#home">AgendaMaster</Navbar.Brand>
+      <Navbar bg-white>
+      <Title> {'Agenda Master - TEL 335'}</Title>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-                Signed in as: <a href="#login">You</a>
+            <Navbar.Text style={{color: 'white'}}>
+                Signed in as: <a href="#login">
+                You </a>
             </Navbar.Text>
           </Navbar.Collapse>
-        </Container>
       </Navbar>
       <Container>
         <Row>
@@ -169,7 +173,7 @@ function App() {
 
       
     </Container>
-    
+    </Container>
   );
 }
 

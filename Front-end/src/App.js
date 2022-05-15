@@ -15,6 +15,8 @@ import {Collapse} from 'react-bootstrap';
 import {Card} from 'react-bootstrap';
 import image from "./images/img2.jpg";
 
+import Unity from './Controllers/UnionBE'
+
 
 function Example() {
   const [open, setOpen] = useState(false);
@@ -27,7 +29,7 @@ function Example() {
         aria-controls="example-collapse-text"
         aria-expanded={open}
       >
-        Horario 1 
+        ACA
       </Button>
       <div style={{minHeight: '150px'}}>
         <Collapse in={open} dimension="width">
@@ -93,7 +95,7 @@ function Example() {
 }
 
 
-function App() {
+/*function App() {
   const handler = handlerAgenda();
   const [data, setData] = useState({});
   
@@ -175,8 +177,17 @@ function App() {
     </Container>
     </Container>
   );
+}*/
+
+
+function App() {
+  return (
+    <div className="App">
+      <Unity />
+    </div>
+  )
 }
 
-
-
 export default App;
+
+

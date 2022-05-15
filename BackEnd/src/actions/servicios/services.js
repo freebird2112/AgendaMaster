@@ -8,13 +8,7 @@ exports.getServices = (showPayment) =>{
         obj.serviceName = element.serviceName
         obj.horario1 = element.horario1
         obj.horario2 = element.horario2
-        if(!bool){
-            company.push(obj)
-        }else{
-            obj.paymentType = element.paymentType
-            obj.createdAt = element.createdAt
-            company.push(obj)
-        }       
+        company.push(obj)  
     })
     return company
 }
@@ -32,11 +26,11 @@ exports.updateServices = (info, servicio) => {
 
 }
 
-/*exports.searchByName = (nombre) => {
+exports.searchByName = (nombre) => {
     const object = {
         Name : nombre.serviceName
     } 
-    console.log(object.Name) //esto nos tira false    
+    console.log(object.Name) 
 
     let response = []
     let company = this.getServices(false)    //revisado 
@@ -50,9 +44,9 @@ exports.updateServices = (info, servicio) => {
         }
     })
     return response
-}*/
+}
 
-exports.getService = (ctx) =>{
+/*exports.getService = (ctx) =>{
 
     servicios.json.name.find({name:ctx},function(err, doc) {
             const company = []
@@ -70,7 +64,7 @@ exports.getService = (ctx) =>{
             })
             return company
         });
-}
+}*/
     
 exports.deleteHorario = (hour, ctx) => {
     servicios.json.name.find({name:ctx},function(err, doc){

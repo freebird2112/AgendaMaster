@@ -7,10 +7,10 @@ exports.getAllServices = (ctx) => {
 }
 exports.updateDisponibilidad = (ctx) => {
     ctx.body = serviceAction.updateServices(ctx.request.body, ctx.request.params);
-    //return ctx
+    return ctx
 }
 
-exports.getServicio = (ctx) => {
+exports.postServicio = (ctx) => {
     let request = ctx.request.body
     let response = serviceAction.searchByName(request)
     if(Object.keys(response).length === 0){
@@ -33,20 +33,3 @@ exports.deleteHorario = (ctx) => {
     ctx.body = { message: 'User was removed' }
     return ctx
 }
-
-/*exports.postService = (ctx) => {
-    let request = ctx.request.body
-    let response = serviceAction.searchByName(request)
-    if(Object.keys(response).length === 0){
-        ctx.body = {
-            status : 404,
-            message : 'No encontrado'
-        }
-    }
-    else{
-        ctx.body = {
-            Servicio: response    
-        }
-    }
-    return ctx
-}*/

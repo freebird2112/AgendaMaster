@@ -1,9 +1,6 @@
 import Union from '../Components/Union'
 import { useState, useEffect } from "react"
 import axios from "axios"
-/*import {combineReducers} from 'redux'
-const ADD_USER = 'ADD_USER'
-const DEL_HOUR = 'DEL_HOUR'*/
 
 
 function Unity() {
@@ -26,18 +23,5 @@ function Unity() {
     )
 
 }
-
-/*function addUsuario(){
-    return {
-        type: ADD_USER,
-        nombre,
-        email,
-        horario,
-    }
-}
-
-function deletehora() {
-    type: DEL_HOUR
-}*/
 
 export default Unity

@@ -1,17 +1,17 @@
 {
     "services": [
       {
-        "serviceName": "peluqueria",
+        "serviceName": "Peluqueria",
         "horario1": "5pm",
         "horario2": "7pm"
       },
       {
-        "serviceName": "veterinario",
+        "serviceName": "Veterinario",
         "horario1": "10am",
         "horario2": "12pm"
       },
       {
-        "serviceName": "manicure",
+        "serviceName": "Manicure",
         "horario1": "3pm",
         "horario2": "4pm"
       }

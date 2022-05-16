@@ -33,38 +33,15 @@ exports.searchByName = (nombre) => {
     console.log(object.Name) 
 
     let response = []
-    let company = this.getServices(false)    //revisado 
+    let company = this.getServices(false)
 
     company.forEach((element) => {
-        if(element.serviceName == object.Name){  //no entra,error aca
+        if(element.serviceName == object.Name){ 
             response.push(element)
-        }
-        else {
-            console.log("No entro cotito")
         }
     })
     return response
 }
-
-/*exports.getService = (ctx) =>{
-
-    servicios.json.name.find({name:ctx},function(err, doc) {
-            const company = []
-            servicesData.services.forEach((element)=> {
-                obj = {}
-                obj.horario1 = element.horario1
-                obj.horario2 = element.horario2
-                if(!bool){
-                    company.push(obj)
-                }else{
-                    obj.paymentType = element.paymentType
-                    obj.createdAt = element.createdAt
-                    company.push(obj)
-                }       
-            })
-            return company
-        });
-}*/
     
 exports.deleteHorario = (hour, ctx) => {
     servicios.json.name.find({name:ctx},function(err, doc){
